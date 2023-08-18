@@ -55,7 +55,7 @@ public class LoginTest extends BaseTest {
         cartPageAct = new CartPage(driver);
         cartPageAct.tutarAssert();
         cartPageAct.cartPageButton();
-        cartPageAct.cardWaitAct();
+        //cartPageAct.cardWaitAct();
         cartPageAct.devamEtButton();
         cartPageAct.invoiceSame();
         cartPageAct.cartPageButton();
@@ -63,12 +63,10 @@ public class LoginTest extends BaseTest {
         cartPageAct.hourSelection();
         cartPageAct.cartPageButton();
         cartPageAct.devamEtButton();
+        //assertion
         cartPageAct.checkPrice(By.xpath("//fe-line-checkout-summary-desktop/fe-line-checkout-price-summary/mat-card/div[1]/div[5]"));
-        //assertion gelicek
-        //cartPageAct.tick();
         cartPageAct.cartPageButton();
         cartPageAct.devamEtButton();
-        //cartPageAct.assertCardInfo("Lütfen kart üzerindeki ismi giriniz");
         cartPageAct.returnHome();
         cartPageAct.rtrnHomeCart();
         cartPageAct.menuTrashCan();

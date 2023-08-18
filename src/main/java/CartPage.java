@@ -15,7 +15,7 @@ public class CartPage extends BasePage{
     By hoverMenuLocator = By.id("homepage-cart-button");
     By trashCanLocator = By.cssSelector("svg[data-icon='trash-can']");
 
-    By heartIconLocator = By.xpath("//fa-icon[@id='fav-add-button-20000008010004']");
+    By sepetIconLocator = By.id("update-cart");
     By jsScrollLocator = By.xpath("//fe-line-checkout-summary-desktop/fe-line-checkout-price-summary/mat-card/div[2]/button/span[2]");
 
     //WebElement elementAction = find(By.xpath("//div[@class='mdc-form-field']//input[@id='mat-mdc-checkbox-3-input']"));
@@ -28,14 +28,14 @@ public class CartPage extends BasePage{
     public void cartPageButton() throws InterruptedException {
         //Thread.sleep(1000);
         //WebElement element = find(cartPageButtonLocator);
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(cartPageButtonLocator));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(cartPageButtonLocator));
         jsExecutor.executeScript("arguments[0].scrollIntoView();", element);
-       // Thread.sleep(1000);
+        Thread.sleep(1000);
        // clickElement(cartPageButtonLocator);
     }
-    public void cardWaitAct (){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(heartIconLocator));
-    }
+    /*public void cardWaitAct (){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(sepetIconLocator));
+    }*/
 
     public void devamEtButton(){
         clickElement(cartPageButtonLocator);

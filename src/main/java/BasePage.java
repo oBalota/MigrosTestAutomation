@@ -115,6 +115,12 @@ public class BasePage {
         } else {
             logger.info("Fiyatlar birbirlerini tutmuyor.");
         }
+    }
+
+    public void posetUcret () {
+
+    }
+
    /* public void jsScroll(By locator) throws InterruptedException {
         //Thread.sleep(1000);
         jsExecutor.executeScript("arguments[0].scrollIntoView();", find(locator) );
@@ -136,5 +142,4 @@ public class BasePage {
             sontutar*/
 
 
-    }
 }
